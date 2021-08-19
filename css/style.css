@@ -21,22 +21,178 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 
 /*BODY*/
 body{
+	font-family: Helvetica, Arial, sans-serif;
+	color: #262626;
+}
+
+.profile-content{
+	display: flex;
+  	flex-wrap: nowrap;
+ 	/* background-color: DodgerBlue; */
+}
+
+
+.profile-content{
+}
+.profile-info h1{
+	font-size: 25px;
+}
+
+.profile-info h2{
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.profile-info ul{
+	list-style-type: none;
+	margin-left: -40px;
+	font-size: 15px;
+	line-height: 20px;
+}
+
+.profile-data p{
+	margin: 0;
+	display: inline-block;
+	margin-right: 15px;
+}
+
+.profile-data p span{
+	font-weight: bold;
+}
+/* ---------------------------------------- */
+
+.highlighted-stories{
+	display: flex;
+  	flex-wrap: nowrap;
+ 	/* background-color: rgb(30, 255, 131); */
+	width: 100%;
+	height: 200px;
+}
+.highlighted-stories ul *{
+	list-style-type: none;
+	display: inline-block;
+	margin-left: 4px;
+}
+
+
+
+.add-new-highlight figure img{
+	display: block;
+	width: 77px;
+	height: 10vh;
+	border: 3px solid white;
+	background-color: white;
+	border-radius: 100%;
+	margin-left: -17px;
+	margin-bottom: 5px;
+}
+
+.other-highlight figure figcaption{
+	text-align: center;
+}
+
+.other-highlight figure img{
+	display: block;
+	width: 77px;
+	height: 10vh;
+	border: 3px solid white;
+	border-radius: 100%;
+	margin-left: 15px;
+	margin-bottom: 5px;
+}
+
+.other-highlight figure{
+	margin-left: -20px;
 
 }
+
+/* ----------------------------------------------------- */
+
+
+.profile-posts{
+	/* background-color: tomato; */
+}
+.profile-posts *{
+	list-style-type: none;
+	/* display: flex; */
+	/* flex-wrap: nowrap; */
+	/* width: 100%; */
+}
+
+.profile-posts nav{
+	text-align: center;
+	/* background-color: #262626; */
+	height: 30px;
+}
+
+.profile-posts nav a{
+	/* margin-left: 50px; */
+	text-decoration: none;
+	text-transform: uppercase;
+	/* background-color: violet; */
+}
+.profile-posts nav a:hover {
+	border-top: 1px solid black;
+}
+
+
+.profile-posts ul li{
+	display: inline-block;
+	border: 1px solid rgb(150, 149, 149);
+	/* border-radius: 30px; */
+	box-shadow: 2px 5px 5px #888888;
+	margin-bottom: 5px;
+	margin-right: 10px;
+}
+.profile-posts ul li figure img{
+	width: 293px;
+	height: 293px;
+	/* flex-wrap: nowrap; */
+}
+
+
+hr{
+	
+	margin: 0;
+	width: 100%;
+	height: 1px;
+	background-color: #000000;
+}
+
 
 /*TOPO*/
 header{
+	display: flex;
+	flex-wrap: nowrap;
 	
 }
 
+.profile-photo figure img{
+	border: 3px solid #05133c;
+	border-radius: 100%;
+	padding: 1px;
+}
 /*RODAPÉ*/
-footer{
 
+.footer-nav{
+	text-align: center;
+}
+.footer-nav a{
+	list-style-type: none;
+	text-decoration: none;
+	margin-left: 20px;
+	color: #000000;
+}
+
+.copyright{
+	text-align: right;
+	color: #000000;
 }
 
 /*PÁGINA INICIAL*/
 main{
-	
+	margin-left: 180px;
+	width: 935px;
 }
 	main .profile-content{
 
