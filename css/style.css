@@ -1,207 +1,197 @@
-/*
-Theme Name: Instagram
-Author: Kenzie Academy
-Author URI: kenzie.com.br;
-Version: 1.0
- 
---------------------------------------------
-SUGESTÃO DE ESTRUTURAÇÃO BASE 
---------------------------------------------
-**** DECLARAÇÃO DE VARIÁVEIS
-**** BODY
-**** TOPO
-**** RODAPÉ
-**** PÁGINA INICIAL
-*/
-
-/* VARIÁVEIS */
-:root{
-  
-}
-
-/*BODY*/
-body{
+html,body,header,figure,img,a,main,section,h1,h2,ul,li,p,div,span,article,nav,i,footer{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
 	font-family: Helvetica, Arial, sans-serif;
 	color: #262626;
 }
 
-.profile-content{
-	display: flex;
-  	flex-wrap: nowrap;
- 	/* background-color: DodgerBlue; */
+main{
+	width: 100%;
 }
 
+/* --------------------CONTEÚDO SOBRE O USUÁRIO-------------------- */
+
+/* FOTO DE PERFIL DO USUÁRIO */
+
+.titulo{
+	margin:10px;
+}
 
 .profile-content{
+	display: inline-block;
+
 }
+
+.profile-photo{
+	width: 20%;
+}
+
+.profile-photo img {
+    width: 100%;
+    border: 3px solid;
+    border-radius: 100%;
+    padding: 1px;
+}
+
+.profile-photo{
+	/* background-color: teal; */
+}
+.profile-photo{
+	float:left;
+	position: relative;
+	left: 25%;
+	transform: translateX(-25%);
+}
+
+.profile-info{
+	float:left;
+	position: relative;
+	left: 50%;
+	transform: translateX(-55%);
+}
+/* .profile-photo, */
+
+
+
+/* DETALHES/INFORMAÇÕES DO USUÁRIO */
+
+.profile-info{
+	width: 50%;
+}
+
 .profile-info h1{
-	font-size: 25px;
+	font-size: 200%;
+	font-weight: bold;
 }
 
 .profile-info h2{
-	font-size: 15px;
-	font-weight: bold;
+	font-size: 150%;
+	
 }
+/* POSTS/SEGUIDORES/SEGUINDO */
 
-.profile-info ul{
-	list-style-type: none;
-	margin-left: -40px;
-	font-size: 15px;
-	line-height: 20px;
+.profile-info ul li p{
+	font-size: 120%;
 }
-
 .profile-data p{
-	margin: 0;
 	display: inline-block;
-	margin-right: 15px;
+}
+/* --------------------DESTAQUES DO USUÁRIO-------------------- */
+
+.highlighted-stories ul{
 }
 
-.profile-data p span{
-	font-weight: bold;
-}
-/* ---------------------------------------- */
-
-.highlighted-stories{
-	display: flex;
-  	flex-wrap: nowrap;
- 	/* background-color: rgb(30, 255, 131); */
-	width: 100%;
-	height: 200px;
-}
-.highlighted-stories ul *{
-	list-style-type: none;
+.add-new-highlight, .other-highlight{
+	margin-left: 20px;
 	display: inline-block;
-	margin-left: 4px;
+
 }
 
-
-
-.add-new-highlight figure img{
-	display: block;
-	width: 77px;
-	height: 10vh;
-	border: 3px solid white;
-	background-color: white;
+.add-new-highlight figure img, .other-highlight figure img{
+	border: 2px solid black;
 	border-radius: 100%;
-	margin-left: -17px;
-	margin-bottom: 5px;
+	width: 77px;
 }
-
-.other-highlight figure figcaption{
+.add-new-highlight figure, .other-highlight figure{
 	text-align: center;
 }
 
-.other-highlight figure img{
-	display: block;
-	width: 77px;
-	height: 10vh;
-	border: 3px solid white;
-	border-radius: 100%;
-	margin-left: 15px;
-	margin-bottom: 5px;
-}
-
-.other-highlight figure{
-	margin-left: -20px;
-
-}
-
-/* ----------------------------------------------------- */
-
+/* --------------------LISTA DE POSTS - GALERIA-------------------- */
 
 .profile-posts{
-	/* background-color: tomato; */
-}
-.profile-posts *{
-	list-style-type: none;
-	/* display: flex; */
-	/* flex-wrap: nowrap; */
-	/* width: 100%; */
+	text-align: center;
 }
 
 .profile-posts nav{
-	text-align: center;
-	/* background-color: #262626; */
-	height: 30px;
+	margin-top: 0;
+	margin-bottom: 30px;
 }
 
 .profile-posts nav a{
-	/* margin-left: 50px; */
-	text-decoration: none;
-	text-transform: uppercase;
-	/* background-color: violet; */
-}
-.profile-posts nav a:hover {
-	border-top: 1px solid black;
+	margin-left: 30px;
 }
 
+.profile-posts ul{
+	column-count: 1;
+}
 
 .profile-posts ul li{
-	display: inline-block;
-	border: 1px solid rgb(150, 149, 149);
-	/* border-radius: 30px; */
-	box-shadow: 2px 5px 5px #888888;
-	margin-bottom: 5px;
-	margin-right: 10px;
 }
-.profile-posts ul li figure img{
-	width: 293px;
-	height: 293px;
-	/* flex-wrap: nowrap; */
-}
-
-
-hr{
-	
-	margin: 0;
+.profile-posts ul li a figure img{
 	width: 100%;
-	height: 1px;
-	background-color: #000000;
+	height: 100%;
+	max-width: 350px;
+	max-height: 350px;
+	min-width: 293px;
+	min-height: 293px;
+
 }
 
 
-/*TOPO*/
-header{
-	display: flex;
-	flex-wrap: nowrap;
-	
-}
-
-.profile-photo figure img{
-	border: 3px solid #05133c;
-	border-radius: 100%;
-	padding: 1px;
-}
-/*RODAPÉ*/
-
+/* --------------------MENU RODAPÉ-------------------- */
 .footer-nav{
 	text-align: center;
+	margin-top: 5px;
+	margin-bottom: 10px;
 }
+
 .footer-nav a{
-	list-style-type: none;
-	text-decoration: none;
-	margin-left: 20px;
-	color: #000000;
+	margin-left: 7px;
 }
-
 .copyright{
-	text-align: right;
-	color: #000000;
+	text-align: center;
 }
 
-/*PÁGINA INICIAL*/
-main{
-	margin-left: 180px;
-	width: 935px;
+
+
+
+
+
+
+/* -------------------- 395 < view < 935 -------------------- */
+
+
+@media (min-width:584px) and (max-width: 935px){
+	body{
+		/* background-color: blue; */
+	}
+
+	.profile-posts ul{
+		column-count: 2;
+	}
+
+	.profile-posts ul li a figure img{
+		width: 100%;
+		height: 100%;
+		max-width: 350px;
+		max-height: 350px;
+		min-width: 293px;
+		min-height: 293px;
+	
+	}
 }
-	main .profile-content{
 
+/* -------------------- 935+ --------------------------------- */
+
+@media (min-width: 935px){
+	body{
+		/* background-color: green; */
 	}
 
-	main .highlighted-stories{
-
+	.profile-posts ul{
+		column-count: 3;
 	}
 
-	main .profile-posts{
-
+	.profile-posts ul li a figure img{
+		width: 100%;
+		height: 100%;
+		max-width: 350px;
+		max-height: 350px;
+		min-width: 293px;
+		min-height: 293px;
+	
 	}
+}
