@@ -127,10 +127,11 @@ body{
 .profile-posts ul{
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: center;
 }
 
 .profile-posts ul li{
+	margin: 5px;
 	
 }
 .profile-posts ul li a figure img{
