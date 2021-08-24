@@ -8,172 +8,226 @@ html,body,header,figure,img,a,main,section,h1,h2,ul,li,p,div,span,article,nav,i,
 	color: #262626;
 }
 
-body{
-	width: 935px;
+:root{
+	--margin-padrao: 5px;
 }
-
-/* --------------------CONTEÚDO SOBRE O USUÁRIO-------------------- */
-
-/* FOTO DE PERFIL DO USUÁRIO */
-
 .titulo{
-	margin:10px;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	/* background-color: #262626; */
+	width: 246px;
+	height: 61px;
 }
+.container{
+	width: 400px;
+	/* background-color: rgb(177, 176, 177); */
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+/* -------------------------profile-content---------------- */
 
 .profile-content{
-	display: inline-block;
-
+	display: flex;
+	/* flex-wrap: wrap; */
+	/* align-items: center; */
 }
+
 
 .profile-photo{
-	width: 20%;
+	/* background-color: teal; */
+	width: 100px;
 }
-
-.profile-photo img {
-    width: 100%;
+.profile-photo img{
+	width: 100px;
     border: 3px solid;
     border-radius: 100%;
     padding: 1px;
 }
 
-.profile-photo{
-	/* background-color: teal; */
-}
-.profile-photo{
-	float:left;
-	position: relative;
-	left: 25%;
-	transform: translateX(-25%);
-}
-
 .profile-info{
-	float:left;
-	position: relative;
-	left: 50%;
-	transform: translateX(-55%);
-}
-/* .profile-photo, */
-
-
-
-/* DETALHES/INFORMAÇÕES DO USUÁRIO */
-
-.profile-info{
-	width: 50%;
+	/* background-color: tan; */
+	font-size: 15px;
 }
 
 .profile-info h1{
-	font-size: 200%;
-	font-weight: bold;
+	font-size: 20px;
 	margin-bottom: 10px;
+	margin-left: var(--margin-padrao);;
 }
 
 .profile-info h2{
-	font-size: 100%;
-	
+	font-size: 15px;
+	margin-left: var(--margin-padrao);;
 }
-/* POSTS/SEGUIDORES/SEGUINDO */
 
-.profile-info ul li p{
-	font-size: 100%;
+.profile-info ul{
+	margin-left: var(--margin-padrao);
 }
-.profile-data p{
-	display: inline-block;
-	margin-right: 10px;
+
+.profile-data{
+	margin-left: var(--margin-padrao);
+	margin-top: var(--margin-padrao);
+	/* background-color: aquamarine; */
+	display: flex;
+	font-size: 12px;
+}
+
+
+.profile-data p:not(:first-child){
+	margin-left: var(--margin-padrao);
 }
 
 .profile-data p span{
 	font-weight: bold;
 }
-/* --------------------DESTAQUES DO USUÁRIO-------------------- */
+
+/* ------------------highlighted-stories------------------ */
+
+.highlighted-stories{
+	width: 500px;
+	/* background-color: steelblue; */
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-top: var(--margin-padrao);
+}
 
 .highlighted-stories ul{
+	display: flex;
+	margin-left: 50px;
+	/* background-color: blueviolet; */
 }
 
-.add-new-highlight, .other-highlight{
-	margin-left: 20px;
-	display: inline-block;
 
-}
-
-.add-new-highlight figure img, .other-highlight figure img{
+.highlighted-stories ul li figure img{
+	width: 44px;
 	border: 2px solid black;
 	border-radius: 100%;
-	width: 77px;
 }
-.add-new-highlight figure, .other-highlight figure{
+
+.highlighted-stories ul li figure{
+	display: flex;
+	flex-direction: column;
 	text-align: center;
 }
 
-/* --------------------LISTA DE POSTS - GALERIA-------------------- */
-
-.profile-posts nav a:hover{
-	border-top: 10px solid black;
-	border-radius: 10px;
+.other-highlight,.add-new-highlighted{
+	width: 50px;
+	margin-left: 10px;
 }
+
+/* ---------------- profile-posts--------------------------*/
+
 .profile-posts{
-	text-align: center;
+	/* background-color: tan; */
 }
 
 .profile-posts nav{
-	margin-top: 0;
-	margin-bottom: 30px;
-}
-
-.profile-posts nav a{
-	margin-left: 30px;
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: var(--margin-padrao);
 }
 
 .profile-posts ul{
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+	flex-direction: column;
+	align-items: center;
 }
 
-.profile-posts ul li{
-	margin: 5px;
-	
-}
-.profile-posts ul li a figure img{
-	width: 293px;
+.profile-posts ul li figure img{
+	width:293px;
 	height: 293px;
 }
 
+/* ---------------footer----------------------------------- */
 
-/* --------------------MENU RODAPÉ-------------------- */
 .footer-nav{
-	text-align: center;
-	margin-top: 5px;
-	margin-bottom: 10px;
+	font-size: 12px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	/* background-color: violet; */
 }
 
 .footer-nav a{
-	margin-left: 7px;
+	color: #a1a1a1;
 }
+
 .copyright{
+	font-size: 12px;
 	text-align: center;
 }
-
-
-
-
-
-
-
-/* -------------------- 395 < view < 935 -------------------- */
-
-
-@media (min-width:584px) and (max-width: 935px){
-	body{
-		/* background-color: blue; */
-	}
-
+.copyright p{
+	color: #a1a1a1;
 }
 
-/* -------------------- 935+ --------------------------------- */
+@media (min-width:600px){
 
-@media (min-width: 935px){
-	body{
-		/* background-color: green; */
+	.titulo{
+		position: static;
+		margin: var(--margin-padrao);
+		background-color: #262626;
+		width: 0px;
+		height: 61px;
+	}
+	.container{
+		/* background-color: #cecece; */
+		width: 935px;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.profile-content{
+		display: flex;
+		/* background-color: tan; */
+		width: 500px;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.highlighted-stories{
+		width: 500px;
+		/* background-color: steelblue; */
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		margin-top: var(--margin-padrao);
+	}
+
+	.highlighted-stories ul{
+		display: flex;
+		/* background-color: blueviolet; */
+	}
+	
+
+	.highlighted-stories ul li figure img{
+		width: 44px;
+		border: 2px solid black;
+		border-radius: 100%;
+		width: 77px;
+	}
+
+	.highlighted-stories ul li figure{
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.other-highlight{
+		margin-left: 10px;
+	}
+
+	.profile-posts ul{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		margin-left: var(--margin-padrao);
 	}
 }
