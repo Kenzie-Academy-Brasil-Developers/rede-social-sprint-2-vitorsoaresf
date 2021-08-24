@@ -175,7 +175,6 @@ html,body,header,figure,img,a,main,section,h1,h2,ul,li,p,div,span,article,nav,i,
 		height: 61px;
 	}
 	.container{
-		/* background-color: #cecece; */
 		width: 935px;
 		position: relative;
 		left: 50%;
@@ -184,7 +183,6 @@ html,body,header,figure,img,a,main,section,h1,h2,ul,li,p,div,span,article,nav,i,
 
 	.profile-content{
 		display: flex;
-		/* background-color: tan; */
 		width: 500px;
 		position: relative;
 		left: 50%;
@@ -193,21 +191,18 @@ html,body,header,figure,img,a,main,section,h1,h2,ul,li,p,div,span,article,nav,i,
 
 	.highlighted-stories{
 		width: 500px;
-		/* background-color: steelblue; */
 		position: relative;
 		left: 50%;
 		transform: translateX(-50%);
 		margin-top: var(--margin-padrao);
 	}
-
+	
 	.highlighted-stories ul{
 		display: flex;
-		/* background-color: blueviolet; */
+		margin-left: -30px;
 	}
-	
 
 	.highlighted-stories ul li figure img{
-		width: 44px;
 		border: 2px solid black;
 		border-radius: 100%;
 		width: 77px;
