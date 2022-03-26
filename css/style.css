@@ -1,51 +1,228 @@
-/*
-Theme Name: Instagram
-Author: Kenzie Academy
-Author URI: kenzie.com.br;
-Version: 1.0
- 
---------------------------------------------
-SUGESTÃO DE ESTRUTURAÇÃO BASE 
---------------------------------------------
-**** DECLARAÇÃO DE VARIÁVEIS
-**** BODY
-**** TOPO
-**** RODAPÉ
-**** PÁGINA INICIAL
-*/
+html,body,header,figure,img,a,main,section,h1,h2,ul,li,p,div,span,article,nav,i,footer{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+	font-family: Helvetica, Arial, sans-serif;
+	color: #262626;
+}
 
-/* VARIÁVEIS */
 :root{
-  
+	--margin-padrao: 5px;
+}
+.titulo{
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	/* background-color: #262626; */
+	width: 246px;
+	height: 61px;
+}
+.container{
+	width: 400px;
+	/* background-color: rgb(177, 176, 177); */
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
-/*BODY*/
-body{
+/* -------------------------profile-content---------------- */
 
+.profile-content{
+	display: flex;
+	/* flex-wrap: wrap; */
+	/* align-items: center; */
 }
 
-/*TOPO*/
-header{
+
+.profile-photo{
+	/* background-color: teal; */
+	width: 100px;
+}
+.profile-photo img{
+	width: 100px;
+    border: 3px solid;
+    border-radius: 100%;
+    padding: 1px;
+}
+
+.profile-info{
+	/* background-color: tan; */
+	font-size: 15px;
+}
+
+.profile-info h1{
+	font-size: 20px;
+	margin-bottom: 10px;
+	margin-left: var(--margin-padrao);;
+}
+
+.profile-info h2{
+	font-size: 15px;
+	margin-left: var(--margin-padrao);;
+}
+
+.profile-info ul{
+	margin-left: var(--margin-padrao);
+}
+
+.profile-data{
+	margin-left: var(--margin-padrao);
+	margin-top: var(--margin-padrao);
+	/* background-color: aquamarine; */
+	display: flex;
+	font-size: 12px;
+}
+
+
+.profile-data p:not(:first-child){
+	margin-left: var(--margin-padrao);
+}
+
+.profile-data p span{
+	font-weight: bold;
+}
+
+/* ------------------highlighted-stories------------------ */
+
+.highlighted-stories{
+	width: 500px;
+	/* background-color: steelblue; */
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-top: var(--margin-padrao);
+}
+
+.highlighted-stories ul{
+	display: flex;
+	margin-left: 50px;
+	/* background-color: blueviolet; */
+}
+
+
+.highlighted-stories ul li figure img{
+	width: 44px;
+	border: 2px solid black;
+	border-radius: 100%;
+}
+
+.highlighted-stories ul li figure{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.other-highlight,.add-new-highlighted{
+	width: 50px;
+	margin-left: 10px;
+}
+
+/* ---------------- profile-posts--------------------------*/
+
+.profile-posts{
+	/* background-color: tan; */
+}
+
+.profile-posts nav{
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: var(--margin-padrao);
+}
+
+.profile-posts ul{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.profile-posts ul li figure img{
+	width:293px;
+	height: 293px;
+}
+
+/* ---------------footer----------------------------------- */
+
+.footer-nav{
+	font-size: 12px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	/* background-color: violet; */
+}
+
+.footer-nav a{
+	color: #a1a1a1;
+}
+
+.copyright{
+	font-size: 12px;
+	text-align: center;
+}
+.copyright p{
+	color: #a1a1a1;
+}
+
+@media (min-width:600px){
+
+	.titulo{
+		position: static;
+		margin: var(--margin-padrao);
+		background-color: #262626;
+		width: 0px;
+		height: 61px;
+	}
+	.container{
+		width: 935px;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.profile-content{
+		display: flex;
+		width: 500px;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.highlighted-stories{
+		width: 500px;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		margin-top: var(--margin-padrao);
+	}
 	
-}
-
-/*RODAPÉ*/
-footer{
-
-}
-
-/*PÁGINA INICIAL*/
-main{
-	
-}
-	main .profile-content{
-
+	.highlighted-stories ul{
+		display: flex;
+		margin-left: -30px;
 	}
 
-	main .highlighted-stories{
-
+	.highlighted-stories ul li figure img{
+		border: 2px solid black;
+		border-radius: 100%;
+		width: 77px;
 	}
 
-	main .profile-posts{
-
+	.highlighted-stories ul li figure{
+		display: flex;
+		flex-direction: column;
+		text-align: center;
 	}
+
+	.other-highlight{
+		margin-left: 10px;
+	}
+
+	.profile-posts ul{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		margin-left: var(--margin-padrao);
+	}
+}

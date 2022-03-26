@@ -1,5 +1,6 @@
 # Extra: Estilize uma Rede Social
 
+Link App - https://kenzie-academy-brasil-developers.github.io/rede-social-sprint-2-vitorsoaresf/ <br>
 Para esta entrega, você continuará prototipando um layout de uma rede social, mas desta vez se concentrando em uma página de perfil como mostrado no mockup abaixo.
 
 ## Visão Geral
